@@ -1,6 +1,6 @@
 # About 
 
-This is an auto compilation/installation script for OpenCV 4.1.1 . It will create a clean ~/opencv folder, download all required dependencies and OpenCV & Contrib tars. Then, will extract and make them. This script is to make new OpenCV installations on Linux systems easier, and it won't check for errors during the process, so, make sure to follow the terminal messages. 
+This is an auto compilation/installation script for OpenCV 4.1.2 . It will create a clean ~/opencv folder, download all required dependencies and OpenCV & Contrib tars. Then, will extract and make them. This script is to make new OpenCV installations on Linux systems easier, and it won't check for errors during the process, so, make sure to follow the terminal messages. 
 
 
 # How to use
@@ -12,7 +12,7 @@ This is an auto compilation/installation script for OpenCV 4.1.1 . It will creat
 cd ~ 
 git clone https://github.com/Jeanvit/opencvautoinstaller.git
 cd opencvautoinstaller
-sudo sh opecvautoinstaller.sh
+sudo sh opecvautoinstall.sh
 ``` 
 
 # Test if it is working properly
@@ -27,8 +27,8 @@ g++ opencvtest.cpp -o opencvtest `pkg-config --cflags --libs opencv4`
 - Ideally this commands must not generate errors and output the following text:
 
 ```
-OpenCV version : 4.1.1
+OpenCV version : 4.1.2
 Major version : 4
 Minor version : 1
-Subminor version : 1
+Subminor version : 2
 ```

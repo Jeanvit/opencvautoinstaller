@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "This is an auto compilation/installation bash script for OpenCV 4.1.1 created by www.jeanvitor.com. If you choose to continue, all needed dependencies, "
+echo "This is an auto compilation/installation bash script for OpenCV 4.1.2 created by www.jeanvitor.com. If you choose to continue, all needed dependencies, "
 echo "and OpenCV & Contrib zips is will be downloaded, compiled and installed. So, this may take a while to finish."
 echo "Press [ENTER] to continue or [CTRL][C] to cancel."
 read var
@@ -11,19 +11,19 @@ cd ~
 rm -r opencv && echo "Removing old OpenCV folder" || echo "Creating a new ~/OpenCV/"; mkdir opencv
 cd opencv
 echo "Downloading OpenCV"
-wget https://github.com/opencv/opencv/archive/4.1.1.tar.gz
+wget https://github.com/opencv/opencv/archive/4.1.2.tar.gz
 echo "Extracting..."
-tar -zxf 4.1.1.tar.gz && echo "OK" || exit
-rm 4.1.1.tar.gz
+tar -zxf 4.1.2.tar.gz && echo "OK" || exit
+rm 4.1.2.tar.gz
 echo "Downloading OpenCV_contrib"
-wget https://github.com/opencv/opencv_contrib/archive/4.1.1.tar.gz
+wget https://github.com/opencv/opencv_contrib/archive/4.1.2.tar.gz
 echo "Extracting..."
-tar -zxf 4.1.1.tar.gz && echo "OK" || exit
-rm 4.1.1.tar.gz
+tar -zxf 4.1.2.tar.gz && echo "OK" || exit
+rm 4.1.2.tar.gz
 mkdir build
 cd build
 echo "Running cmake..."
-cmake -D CMAKE_BUILD_TYPE=Release -D OPENCV_GENERATE_PKGCONFIG=YES -OPENCV_EXTRA_MODULES_PATH=~/opencv/opencv_contrib-4.1.1/modules/ -DCMAKE_INSTALL_PREFIX=/usr/local ~/opencv/opencv-4.1.1/ && echo "OK" || exit
+cmake -D CMAKE_BUILD_TYPE=Release -D OPENCV_GENERATE_PKGCONFIG=YES -OPENCV_EXTRA_MODULES_PATH=~/opencv/opencv_contrib-4.1.2/modules/ -DCMAKE_INSTALL_PREFIX=/usr/local ~/opencv/opencv-4.1.2/ && echo "OK" || exit
 cores=$(nproc)
 echo "Running make..."
 make -j$cores && echo "OK" || exit
