@@ -1,5 +1,5 @@
 #!/bin/bash
-version=4.2.0
+version=4.3.0
 if [ "$1" != "" ]; then
    version=$1
 fi
