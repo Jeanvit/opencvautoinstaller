@@ -34,8 +34,8 @@ g++ opencvtest.cpp -o opencvtest `pkg-config --cflags --libs opencv4`
 - Ideally this commands must not generate errors and output the following text:
 
 ```
-OpenCV version : 4.3.0
+OpenCV version : 4.5.2
 Major version : 4
-Minor version : 3
-Subminor version : 0
+Minor version : 5
+Subminor version : 2
 ```
